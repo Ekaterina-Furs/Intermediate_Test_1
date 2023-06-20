@@ -1,5 +1,5 @@
 ﻿Console.Write("Введите количество элементов массива: ");
-int m = Convert.ToInt32(Console.ReadLine());
+int m = int.Parse(Console.ReadLine()!);
 string[] Array = new string[m];
 
 void Input(string[] Array) //вводим элементы начального массива
@@ -20,7 +20,7 @@ string[] Value(string[] Array)  //считаем количество подхо
         if (Array[i].Length <= 3)
             count++;
     }
-    string[] result = new string[count]; //помещаем подходящие элементы в новую строку
+    string[] result = new string[count]; //помещаем подходящие элементы в новую строку длиной в количество подсчитанных элементов
     int j = 0;
     for (int i = 0; i < Array.Length; i++)
     {
